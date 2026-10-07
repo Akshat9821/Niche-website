@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Bebas Neue', 'Syne', sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+body {
+  background-color: #11100E;
+  color: #F6F1E8;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Outlined Display Text (like Moodang's "PIZZA THAT" hero text) */
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px #FCF9F3;
+  color: transparent;
+}
+
+.text-stroke-white-thick {
+  -webkit-text-stroke: 2.5px #FCF9F3;
+  color: transparent;
+}
+
+.text-stroke-black {
+  -webkit-text-stroke: 1.5px #11100E;
+  color: transparent;
+}
+
+.text-stroke-yellow {
+  -webkit-text-stroke: 1.5px #F5BA27;
+  color: transparent;
+}
+
+.text-stroke-red {
+  -webkit-text-stroke: 1.5px #D94528;
+  color: transparent;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #11100E;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B3833;
+  border-radius: 4px;
+  border: 2px solid #11100E;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5BA27;
+}
+
+/* Marquee infinite loop */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
+}
+
+/* Hard Neo-Brutalist Buttons */
+.brutal-btn-cream {
+  background-color: #F6F1E8;
+  color: #11100E;
+  border: 2px solid #11100E;
+  box-shadow: 4px 4px 0px #11100E;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.brutal-btn-cream:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #11100E;
+}
+.brutal-btn-cream:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #11100E;
+}
+
+.brutal-btn-yellow {
+  background-color: #F5BA27;
+  color: #11100E;
+  border: 2px solid #11100E;
+  box-shadow: 4px 4px 0px #11100E;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.brutal-btn-yellow:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #11100E;
+}
+.brutal-btn-yellow:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #11100E;
+}
+
+.brutal-btn-red {
+  background-color: #D94528;
+  color: #FCF9F3;
+  border: 2px solid #11100E;
+  box-shadow: 4px 4px 0px #11100E;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.brutal-btn-red:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #11100E;
+}
+.brutal-btn-red:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #11100E;
+}
+
+.brutal-badge {
+  border: 2px solid #11100E;
+  box-shadow: 3px 3px 0px #11100E;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Card offset brutal styling */
+.brutal-card-border {
+  border: 2px solid #11100E;
+  box-shadow: 6px 6px 0px #11100E;
+}
+
+/* Subtle dot texture */
+.bg-grid-dots {
+  background-image: radial-gradient(rgba(246, 241, 232, 0.12) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.bg-grid-dots-dark {
+  background-image: radial-gradient(rgba(17, 16, 14, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
